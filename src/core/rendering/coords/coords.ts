@@ -4,8 +4,6 @@ export interface ICoords {
 }
 
 export class Coords implements ICoords {
-  private static readonly _DEFAULT_COORD_VALUE = 0;
-
   private _x = 0;
   private _y = 0;
 
@@ -45,10 +43,8 @@ export class Coords implements ICoords {
    * @returns
    */
   public reset(coords?: Partial<ICoords>): Coords {
-    const { _DEFAULT_COORD_VALUE } = Coords;
-
-    this._x = coords?.x || _DEFAULT_COORD_VALUE;
-    this._y = coords?.y || _DEFAULT_COORD_VALUE;
+    this._x = coords?.x || 0;
+    this._y = coords?.y || 0;
 
     return this;
   }
