@@ -6,6 +6,11 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].js',
   },
+  resolve: {
+    alias: {
+      '@app': path.resolve(__dirname, 'src'),
+    },
+  },
   module: {
     rules: [
       {

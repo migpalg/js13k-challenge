@@ -6,7 +6,11 @@
     "module": "commonjs",
     "target": "es6",
     "lib": ["dom", "esnext"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/*"]
+    }
   },
   "include": ["src/**/*"]
 }

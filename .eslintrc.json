@@ -12,7 +12,9 @@
     "node": true
   },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-undef": "error",
+    "no-unused-vars": "error"
   },
   "overrides": [
     {
