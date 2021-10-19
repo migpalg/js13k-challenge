@@ -13,6 +13,7 @@ module.exports = {
     extensions: ['.js', '.ts'],
     alias: {
       '@app': path.resolve(__dirname, 'src'),
+      '@core': path.resolve(__dirname, 'src/core'),
     },
   },
   plugins: [

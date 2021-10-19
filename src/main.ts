@@ -1,4 +1,4 @@
-import { Coords } from '@app/core/rendering';
+import { Coords } from '@core/rendering';
 
 function main() {
   const coords = new Coords();
