@@ -1,3 +1,6 @@
+// @packages
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -12,6 +15,23 @@ module.exports = {
       '@app': path.resolve(__dirname, 'src'),
     },
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'public',
+          globOptions: {
+            gititnore: true,
+            ignore: ['**/*.html'],
+          },
+        },
+      ],
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Spacecraft',
+      template: './public/index.html',
+    }),
+  ],
   module: {
     rules: [
       {
