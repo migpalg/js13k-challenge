@@ -1,5 +1,9 @@
+import { Coords } from '@app/core/rendering';
+
 function main() {
-  console.log('hello world!');
+  const coords = new Coords();
+
+  console.log(coords.toObject());
 }
 
 main();
