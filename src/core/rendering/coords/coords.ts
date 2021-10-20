@@ -15,10 +15,14 @@ export class Coords implements ICoords {
     return this._y;
   }
 
-  constructor(coords?: ICoords) {
+  constructor(coords?: Partial<ICoords>) {
     this.reset(coords);
   }
 
+  /**
+   * Returns formatted coords
+   * @returns returns coords
+   */
   public toObject(): ICoords {
     return {
       x: this._x,
