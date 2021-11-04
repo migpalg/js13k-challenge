@@ -1,14 +1,14 @@
-import { Coords } from '@core/rendering';
+// @scripts
+import { App } from '@core';
 
+// @styles
+import './scss/globals.scss';
+
+/**
+ * Entry point of the application
+ */
 function main() {
-  const app = document.getElementById('app');
-  const coords = new Coords();
-
-  const code = document.createElement('code');
-  const pre = document.createElement('pre');
-  pre.innerText = JSON.stringify(coords.toObject(), null, 2);
-  code.appendChild(pre);
-  app?.appendChild(code);
+  App.start(document.getElementById('app'));
 }
 
 main();
